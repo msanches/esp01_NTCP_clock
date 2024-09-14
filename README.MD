@@ -19,6 +19,8 @@ Este projeto utiliza o módulo **ESP01**, um sensor **DHT11** e uma tela **OLED*
 
 ## Diagrama de Conexões
 
+![Diagrama do Circuito](circuito.png)
+
 - **DHT11**
   - Pino de dados -> TX (GPIO1)
   - **Resistor de 4.7kΩ** -> Entre o pino de 3.3V e o pino de dados
