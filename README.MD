@@ -40,4 +40,4 @@ Este projeto utiliza o módulo **ESP01**, um sensor **DHT11** e uma tela **OLED*
 1. Clone este repositório:
 
    ```bash
-   git clone https://https://github.com/msanches/esp01_NTCP_clock
+   git clone https://github.com/msanches/esp01_NTCP_clock
