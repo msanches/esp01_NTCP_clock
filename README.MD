@@ -1,4 +1,4 @@
-# Projeto ESP01 com Sensor DHT11 e Tela OLED
+# Projeto ESP01 com sensor DHT11 e tela OLED
 
 Este projeto utiliza o módulo **ESP01**, um sensor **DHT11** e uma tela **OLED** para exibir informações como dia da semana, data completa, hora, temperatura e umidade. A sincronização de data e hora é feita por meio de um servidor NTP, e os dados de temperatura e umidade são obtidos a partir do sensor DHT11.
 
