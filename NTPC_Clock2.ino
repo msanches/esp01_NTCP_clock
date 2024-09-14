@@ -1,23 +1,17 @@
-//https://github.com/olikraus/u8g2/wiki
-//https://github.com/olikraus/u8g2/wiki/fntgrpstreamline
-//https://blog.eletrogate.com/estacao-meteorologica-residencial-com-esp8266/
-//https://www.circuits-diy.com/esp8266-esp01-local-time-internet-clock-with-oled-ssd1306/#google_vignette
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 
 #include <NTPClient.h>
 #include <WiFiUdp.h>
 
-const char* ssid = "IRONMAN-2.4";    //"AVENGERS";
-const char* password = "372072821";  //"00000000003F4B081909206986";
+const char* ssid = "preencher com o SSID da rede"; 
+const char* password = "preencher com a senha da rede"; 
 
 WiFiUDP udp;
 NTPClient ntp(udp, "b.ntp.br", -3 * 3600, 60000);  // mude o fuso horário de acordo com a região onde você está
 
 #include <U8g2lib.h>
-//U8G2_SH1106_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0); //LCD D1Mini
-//ESP-01 SLC = 2 e SDA = 0  /* Módulo 12F SLC = 14 e SDA = 2
-//U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* SLC=*/14, /* SDA=*/2, /* reset=*/U8X8_PIN_NONE);  
+
 U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* SLC=*/5, /* SDA=*/6, /* reset=*/U8X8_PIN_NONE);  
 
 const char DEGREE_SYMBOL[] = { 0xB0, '\0' };  //Símbolo de graus º
@@ -37,7 +31,7 @@ DHT dht(DHTPIN, DHTTYPE);  // Configure DHT library
 int humidity, temp;  // Values read from sensor
 
 void setup() {
-  // You can open the Arduino IDE Serial Monitor window to see what the code is doing
+
   Serial.begin(9600);  // Serial connection from ESP-01 via 3.3v console cable
   // Connect to WiFi network
   WiFi.begin(ssid, password);
